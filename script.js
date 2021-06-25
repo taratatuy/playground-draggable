@@ -84,6 +84,7 @@ function setDragListener(componentClass) {
 
 function init() {
   setDragListener('window');
+  setDragListener('window-2');
 }
 
 init();

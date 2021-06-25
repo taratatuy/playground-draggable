@@ -1,8 +1,9 @@
 :root {
   --charcoal: hsl(197, 37%, 24%);
   --persian-green: hsl(173, 58%, 39%);
-  --burnt-sienna: hsl(12, 76%, 61%);
+  --yellow: hsl(43, 74%, 66%);
   --orange: hsl(27, 87%, 67%);
+  --burnt-sienna: hsl(12, 76%, 61%);
 
   height: 100%;
   width: 100%;
@@ -27,8 +28,9 @@ header {
 }
 
 .wrapper {
-  height: 70%;
+  /* height: 70%; */
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -36,10 +38,33 @@ header {
 .grid-component {
   height: 400px;
   width: 800px;
+  margin-bottom: 1rem;
 
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 8px;
+}
+
+.grid-component-2 {
+  height: 100px;
+  width: 800px;
+  margin-bottom: 1rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 8px;
+}
+
+.grid-component-3 {
+  height: 100px;
+  width: 800px;
+  margin-bottom: 1rem;
+
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: 1fr;
   gap: 8px;
 }
 
@@ -90,6 +115,22 @@ header {
 }
 
 .window._color_orange {
+  background-color: var(--orange);
+}
+
+.window-2 {
+  height: 100%;
+  width: 100%;
+
+  border-radius: 16px;
+  background-color: var(--yellow);
+}
+
+.window-2._color_charcoal {
+  background-color: var(--charcoal);
+}
+
+.window-2._color_orange {
   background-color: var(--orange);
 }
 
