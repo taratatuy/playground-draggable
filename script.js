@@ -23,6 +23,7 @@ function setDragListener(componentClass) {
 
   // Event on draggable object.
   document.addEventListener('dragend', (e) => {
+    if (!draggingObj) return;
     if (!e.target.classList.contains(componentClass)) return;
 
     draggingObj.style.opacity = 1;
