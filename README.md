@@ -1,15 +1,15 @@
 # Playground-draggable
 
-## Discription
+## Description
 
-Just little demo far draggable elements that can be placed on certain plases.  
+Just little demo contains draggable elements that can be placed on certain places.  
 
 Demo:  
 https://taratatuy.github.io/playground-draggable/
 
-## Instalation
+## Installation
 
-If you wanna launch the project on local do the following steps.  
+If you wanna run the project on local do the following steps.  
 
 ```bash
 git clone https://github.com/taratatuy/playground-draggable.git
