@@ -35,17 +35,19 @@ header {
 }
 
 .grid-component {
+  height: 16em;
+  width: 32em;
   margin-bottom: 1rem;
 
   display: grid;
-  grid-template-rows: 8em 8em;
-  grid-template-columns: 8em 8em 8em 8em;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 8px;
 }
 
 .grid-component-2 {
-  height: 100px;
-  width: 800px;
+  height: 4em;
+  width: 32em;
   margin-bottom: 1rem;
 
   display: grid;
@@ -55,8 +57,8 @@ header {
 }
 
 .grid-component-3 {
-  height: 100px;
-  width: 800px;
+  height: 4em;
+  width: 32em;
   margin-bottom: 1rem;
 
   display: grid;
@@ -99,6 +101,10 @@ header {
   box-shadow: 0 0 16px 0px var(--persian-green) inset;
 }
 
+.draggable {
+  transition: opacity 0.2s ease-out;
+}
+
 .window {
   height: 100%;
   width: 100%;
@@ -129,8 +135,4 @@ header {
 
 .window-2._color_orange {
   background-color: var(--orange);
-}
-
-.draggable {
-  transition: opacity 0.2s ease-out;
 }
