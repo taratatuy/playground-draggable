@@ -1,7 +1,4 @@
-/**
- * @param {string} componentClass - CSS class of draggable element.
- */
-function setDragListener(componentClass) {
+export function setDragListener(componentClass) {
   let draggingObj = null;
 
   // Event on draggable object.
@@ -82,10 +79,3 @@ function setDragListener(componentClass) {
     e.target.appendChild(draggingObj);
   });
 }
-
-function init() {
-  setDragListener('window');
-  setDragListener('window-2');
-}
-
-init();

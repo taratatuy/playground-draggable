@@ -1,0 +1,33 @@
+.placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  border-radius: 14px;
+
+  transition: box-shadow 0.2s ease-out;
+
+  &::before {
+    content: ' ';
+    height: 70%;
+    width: 70%;
+    position: absolute;
+
+    z-index: -1;
+    border-radius: 8px;
+    border: 2px solid @burnt-sienna;
+    opacity: 0;
+
+    transition: opacity 0.2s ease-out;
+  }
+
+  &._visible-border::before {
+    opacity: 1;
+  }
+
+  &._shown {
+    box-shadow: 0 0 16px 0px @persian-green inset;
+  }
+}
