@@ -63,7 +63,7 @@ export function setDragListener(componentClass) {
     // Event on other draggable object (swap two objects).
     // Check if placeholder to paste contain target to the current draggable
     // object and placeholder of the draggable object contain target to a
-    // swappable object (check all it's classes with _target_*).
+    // swappable object (check all its classes with _target_*).
     if (e.target.parentNode.classList.contains('_target_' + componentClass)) {
       [...e.target.classList].forEach((cssClass) => {
         if (draggingObj.parentNode.classList.contains('_target_' + cssClass)) {
