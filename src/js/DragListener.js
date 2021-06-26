@@ -63,11 +63,18 @@ export function setDragListener(componentClass) {
   document.addEventListener('drop', (e) => {
     if (!draggingObj) return;
 
-    // Event on draggable object.
-    if (e.target.classList.contains(componentClass)) {
-      const draggingObjParent = draggingObj.parentNode;
-      e.target.parentNode.appendChild(draggingObj);
-      draggingObjParent.appendChild(e.target);
+    // Event on other draggable object (swap two objects).
+    // Check if placeholder to paste contain target to the current draggable
+    // object and placeholder of the draggable object contain target to a
+    // swappable object (check all it's classes with _target_*).
+    if (e.target.parentNode.classList.contains('_target_' + componentClass)) {
+      [...e.target.classList].forEach((cssClass) => {
+        if (draggingObj.parentNode.classList.contains('_target_' + cssClass)) {
+          const draggingObjParent = draggingObj.parentNode;
+          e.target.parentNode.appendChild(draggingObj);
+          draggingObjParent.appendChild(e.target);
+        }
+      });
     }
 
     // Event on placeholder.
