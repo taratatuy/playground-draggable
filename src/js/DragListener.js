@@ -7,8 +7,6 @@ export function setDragListener(componentClass) {
 
     draggingObj = e.target;
 
-    e.target.style.opacity = 0.2;
-
     const placeholders = document.querySelectorAll(
       `.placeholder._target_${componentClass}`
     );
@@ -23,7 +21,6 @@ export function setDragListener(componentClass) {
     if (!draggingObj) return;
     if (!e.target.classList.contains(componentClass)) return;
 
-    draggingObj.style.opacity = 1;
     draggingObj = null;
 
     const placeholders = document.querySelectorAll(

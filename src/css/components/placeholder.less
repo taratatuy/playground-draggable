@@ -9,6 +9,14 @@
 
   transition: box-shadow 0.2s ease-out;
 
+  &._shown {
+    box-shadow: 0 0 16px 0px @persian-green inset;
+
+    &>* {
+      opacity: 0.5;
+    }
+  }
+
   &::before {
     content: ' ';
     height: 70%;
@@ -25,9 +33,5 @@
 
   &._visible-border::before {
     opacity: 1;
-  }
-
-  &._shown {
-    box-shadow: 0 0 16px 0px @persian-green inset;
   }
 }
